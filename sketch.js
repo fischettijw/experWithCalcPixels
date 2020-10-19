@@ -15,13 +15,16 @@ function initialize() {
     pie = 0;
     squareColor = color('black');
     circleColor = color('red');
-
+    graphicOutput = false;
 }
 
 function setup() {
     initialize();
-    squareCanvas = createCanvas(diameter, diameter);
-    background('lightGray');
+    if (graphicOutput) {
+        squareCanvas = createCanvas(diameter, diameter);
+        background('lightGray');
+        loadPixels();
+    }
     paintPixels();
 }
 
@@ -38,9 +41,10 @@ function paintPixels() {
                 pixelColor = squareColor;
                 squarePixels++;
             }
-            squareCanvas.set(x, y, pixelColor);
+            if (graphicOutput) { squareCanvas.set(x, y, pixelColor); }
         }
     }
     pie = 4 * (circlePixels / (diameter * diameter));
-    squareCanvas.updatePixels();
+    updatePixels();
+    console.log(diameter, pie);
 }
