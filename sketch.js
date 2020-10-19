@@ -44,23 +44,3 @@ function paintPixels() {
     pie = 4 * (circlePixels / (diameter * diameter));
     squareCanvas.updatePixels();
 }
-
-// // function draw() {
-// //     background(220);
-// // }
-
-
-
-// function setup() {
-//     // let img = createImage(400, 400);
-//     let img = createCanvas(300, 300);
-
-//     img.loadPixels();
-//     for (let i = 0; i < img.width; i++) {
-//         for (let j = 0; j < img.height; j++) {
-//             img.set(i, j, color(0, 60, 102, (i % img.width) * 2));
-//         }
-//     }
-//     img.updatePixels();
-//     image(img, 0, 0);
-// }
