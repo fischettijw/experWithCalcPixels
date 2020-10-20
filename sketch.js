@@ -35,7 +35,7 @@ function setup() {
     // output(outputArray);
 
 
-    for (ii = 0; ii < 5; ii++) {
+    for (ii = 0; ii < 6; ii++) {
         diameter += 1000;
         // radius = diameter / 2;
         circlePixels = 0;
